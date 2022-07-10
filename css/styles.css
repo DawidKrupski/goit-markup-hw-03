@@ -11,6 +11,8 @@
   --info-color: #757575;
   --article-text: #757575;
   --footer-kontakt: rgba(255, 255, 255, 0.6);
+  --border-color: #eeeeee;
+  --header-border: #ececec;
 }
 body {
   font-family: "roboto", "raleway", sans-serif;
@@ -19,10 +21,21 @@ body {
   color: var(--text);
   letter-spacing: 0.03em;
   line-height: 24px;
-  position: absolute;
+}
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  border: 0px solid black;
 }
 
 /* ====================HEADER-START==================== */
+header {
+  width: 1600px;
+  height: 80px;
+  display: flex;
+  border: 1px solid var(--header-border);
+}
 
 /* ----------LOGO-START---------- */
 
@@ -32,6 +45,12 @@ body {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
+}
+header .logo {
+  width: 145px;
+  height: 31px;
+  margin-top: 24px;
+  margin-left: 215px;
 }
 .first-word {
   color: var(--main-color);
@@ -52,22 +71,52 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
+  width: 254px;
+  height: 16px;
+  display: flex;
+  margin-top: 32px;
+  margin-left: 93px;
 }
-.menu-items {
+
+.menu-items > a {
   text-decoration: none;
   color: var(--text);
+  height: 16px;
+}
+.menu-items:nth-child(1) {
+  margin-right: 46px;
+}
+.menu-items:nth-child(2) {
+  margin-right: 47px;
 }
 .menu-items:focus,
 .menu-items:hover {
   color: var(--link-focus);
 }
-.mail,
+.header-contact {
+  display: flex;
+  margin-left: 364px;
+  margin-top: 32px;
+}
+.mail {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--info-color);
+  text-decoration: none;
+  width: 135px;
+  height: 16px;
+  margin-right: 50px;
+}
+
 .tel {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--info-color);
   text-decoration: none;
+  width: 110px;
+  height: 16px;
 }
 .mail:hover,
 .mail:focus,
@@ -87,6 +136,8 @@ body {
 /* ----------SLOGAN-START---------- */
 
 .slogan-space {
+  width: 1600px;
+  height: 600px;
   background: var(--secound-background);
 }
 .slogan-text {
@@ -97,6 +148,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--secound-text);
+  padding-top: 200px;
 }
 .order-button {
   background: var(--main-color);
@@ -109,6 +161,8 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+  margin-left: 700px;
+  margin-top: 30px;
 }
 
 /* ----------SLOGAN-END---------- */
@@ -116,12 +170,24 @@ body {
 /* ----------ARTICLE-START---------- */
 
 .article-list {
+  margin-top: 94px;
+  margin-left: 215px;
+  width: 1170px;
+  height: 101px;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
+.article-list > li {
+  width: 270px;
+  height: 101px;
+}
+
 .article-header {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  margin-bottom: 10px;
 }
 .article-list > li > p {
   color: var(--article-text);
@@ -131,15 +197,24 @@ body {
 
 /* ----------WORKING-ON-START---------- */
 
+.working-on {
+  width: 1170px;
+  height: 386px;
+  margin-top: 94px;
+  margin-left: 215px;
+}
 .secoundary-header {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
 }
 .working-list {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* ----------WORKING-ON-END---------- */
@@ -147,22 +222,42 @@ body {
 /* ----------TEAM-START---------- */
 
 .team-description {
+  width: 1600px;
+  height: 648px;
   background: var(--thid-background);
+  margin-top: 94px;
 }
 .team-header {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
   letter-spacing: 0.03em;
+  margin-left: 695px;
+  margin-bottom: 50px;
+  padding-top: 94px;
 }
 .team-list {
   list-style: none;
+  width: 1170px;
+  height: 368px;
+  margin-left: 215px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.team-list > li {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  width: 270px;
+  height: 368px;
 }
 .team-members {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .team-description > ul > li > p {
   font-size: 16px;
@@ -179,9 +274,28 @@ body {
 /* ====================FOOTER-START==================== */
 
 footer {
+  width: 1600px;
+  height: 252px;
   background: var(--secound-background);
+  display: flex;
+  flex-direction: column;
 }
-footer > address {
+footer .logo {
+  width: 145px;
+  height: 31px;
+  margin-top: 60px;
+  margin-left: 215px;
+}
+.contact {
+  margin-left: 215px;
+  margin-top: 20px;
+  width: 246px;
+  height: 81px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact address {
   color: var(--secound-text);
   font-style: normal;
 }
@@ -205,10 +319,24 @@ footer > address {
 
 /* ====================MAIN-START==================== */
 
+.portfolio {
+  width: 1170px;
+  height: 1360px;
+  margin-bottom: 94px;
+}
+
 /* ----------SECOUND-MENU-START---------- */
 
 .secound-menu-list {
   list-style: none;
+  display: flex;
+  width: 572px;
+  justify-content: space-between;
+  margin-top: 94px;
+  margin-left: 510px;
+}
+.secound-menu-list > li {
+  background: var(--thid-background);
 }
 .button:hover,
 .button:focus {
@@ -216,12 +344,20 @@ footer > address {
   background: var(--button-focus);
   cursor: pointer;
 }
-.button > span {
+.button {
   font-family: "Roboto";
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.63;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  background-color: var(--button);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
   text-align: center;
+  padding: 6px 22px;
 }
 
 /* ----------SECOUND-MENU-END---------- */
@@ -229,7 +365,19 @@ footer > address {
 /* ----------EXPIRIENCES-START---------- */
 
 .expiriences-list {
+  width: 1170px;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+  margin-left: 215px;
+  margin-bottom: 94px;
+}
+.expiriences-list li {
+  width: 370px;
+  height: 404px;
+  border: 1px solid #eeeeee;
 }
 .experience-header {
   font-weight: 700;
