@@ -378,19 +378,28 @@ footer .logo {
   width: 370px;
   height: 404px;
   border: 1px solid #eeeeee;
+  display: flex;
+  flex-direction: column;
 }
 .experience-header {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  width: 322px;
+  height: 36px;
+  margin-top: 20px;
+  margin-left: 24px;
 }
 .expiriences-description > ul > li > p {
   font-size: 16px;
   line-height: 1.89;
   color: var(--info-color);
+  width: 322px;
+  height: 36px;
+  margin-top: 4px;
+  margin-left: 24px;
 }
-
 /* ----------EXPIERIENCES-END---------- */
 
 /* ====================MAIN-END==================== */
