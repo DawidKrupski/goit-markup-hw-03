@@ -13,6 +13,7 @@
   --footer-kontakt: rgba(255, 255, 255, 0.6);
   --border-color: #eeeeee;
   --header-border: #ececec;
+  a
 }
 body {
   font-family: "roboto", "raleway", sans-serif;
