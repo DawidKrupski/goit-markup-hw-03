@@ -155,6 +155,7 @@ body {
   padding: 10px 41px 10px 42px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: 0px;
 }
 .button-section {
   display: flex;
@@ -205,7 +206,7 @@ body {
 
 /* ----------TEAM-START---------- */
 
-.team-description {
+.team {
   background: var(--thid-background);
   margin-top: 94px;
   padding-bottom: 94px;
@@ -234,15 +235,17 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  margin-top: 30px;
   margin-bottom: 10px;
 }
-.team-description > ul > li > p {
+.team-description > p {
   font-size: 16px;
   line-height: 1.19;
   color: var(--info-color);
 }
-
+.team-description {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 /* ----------TEAM-END---------- */
 
 /* ====================MAIN-END==================== */
@@ -349,8 +352,9 @@ body {
   color: var(--info-color);
 }
 .experiences-border {
-  border: 1px solid var(--border-color);
-  border-top: 0;
+  border-left: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
   padding: 20px 24px;
 }
 /* ----------EXPIERIENCES-END---------- */
